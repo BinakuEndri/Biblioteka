@@ -1,110 +1,89 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto' sans-serif;
+@font-face {
+    font-family: 'Montserrat-Reg';
+    src: url(Fonts/Montserrat-Regular.ttf);
 }
-.container{
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url(Fonts/Montserrat-Bold.ttf);
+}
+*{
+    font-family: 'Montserrat-Reg';
+}
+
+.banner-image{
+    position: relative;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(Foto/header.jpg);
+    background-size: cover;
     width: 100%;
     height: 85vh;
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(Foto/header.jpg);
-    background-position: center;
-    background-size: cover;
-    padding-left: 8%;
-    padding-right: 8%;
-    box-sizing: border-box;
-}
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+}
+.fixed-top{
+    padding: 2rem!important;
+}
+.nav-link{
+    color: white!important;
+    font-size: 20px !important;
+    transition: 0.6s !important;
+
+}
 .navbar{
-    height: 12%;
-    display: flex;
-    align-items: center;
+    width: 100%!important;
+    transition: 0.6s !important;
+
+
+}
+.fa-solid{
+    color: #E8EDDF;
+    font-size: 2em;
+    transition: 0.6s;
+
+
+}
+.sticky .fa-solid{
+    color: black;
+    font-size: 1em;
+
+
+}
+.sticky{
+    width: 100%!important;
+    background-color: white!important;
+    padding: 0.1rem 1rem 0.1rem 1rem!important;
+    transition: 0.6;
 
 }
 
-.logo{
-    width: 50px;
-    cursor: pointer;
+.sticky .nav-link{
+    color: black!important;
+    font-size: 15px !important;
 }
 
-.menu-icon{
-    width: 30px;
-    cursor: pointer;
-    margin-left: 40px;
+.card {
+    transition: 0.6s!important;
 }
-nav{
-    flex: 1;
-    text-align: right;
-}
-
-nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin-left: 60px;
-}
-
-nav ul li a {
-   text-decoration: none;
-   color: #fff;
-   font-size: 18px;
-}
-.row{
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
-.col{
-    flex-basis: 50%;
-}
-h1{
-    color: #fff;
-    font-size: 100px;
-}
-p{
-    color: #fff;
-    font-size: 15px;
-    line-height: 15px;
-}
-button{
-    width: 180px;
-    color: #000;
-    font-size: 12px;
-    padding: 12px 0;
-    background: #fff;
-    border: 0;
-    border-radius: 20px;
-    outline: none;
-    margin-top: 30px;
-}
-.card{
-    width: 200px;
-    height: 250px;
-    display: inline-block;
-    border-radius: 10px;
-    padding: 15px 25px;
-    box-sizing: border-box;
-    cursor: pointer;
-    margin: 10px 15px;
-    background-position: center;
-    background-size: cover;
-    transition: transform 0.5s
-}
-
 .card:hover{
     transform: translateY(-10px);
 }
-.card1{
-    background-image: url(Foto/header2.jpg);
+h5{
+   font-family: 'Montserrat-Bold'!important;
+   color: #E8EDDF!important; 
+}
+.card-tittle{
+    font-family: 'Montserrat-Bold'!important;
+    color: #E8EDDF!important; 
+}
+.card-text{
+    color: #E8EDDF!important;
+}
+.btn{
+    color: white!important;
 
 }
-.card2{
-    background-image: url(Foto/Pallati\ i\ Endrrave.jpg);
-
-}
-.card3{
-    background-image: url(Foto/Prilli\ i\ thyer.jpg);
-
-}
-.card4{
-    background-image: url(Foto/header2.jpg);
-
+.btn-outline-primary{
+    color: white!important;
 }
