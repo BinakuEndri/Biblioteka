@@ -21,14 +21,14 @@
 }
 h5{
    font-family: 'Montserrat-Bold'!important;
-   color: #E8EDDF!important; 
+   color: #E5E5E5!important; 
 }
 .card-tittle{
     font-family: 'Montserrat-Bold'!important;
-    color: #E8EDDF!important; 
+    color: #E5E5E5!important; 
 }
 .card-text{
-    color: #E8EDDF!important;
+    color: #E5E5E5!important;
 }
 
 
@@ -51,7 +51,7 @@ h5{
 .slidee-container{
     max-width: 1120px;
     width: 100%;
-    background-color: grey;
+    background-color: #E5E5E5;
     display: flex;
     justify-content: center;
     border-radius: 20px;
@@ -61,7 +61,7 @@ h5{
     max-width: 250px;
     min-width: 50px;
     border-radius: 25px;
-    background-color: #E8EDDF;
+    background-color: #14213D;
     transition: 0.6s;
 }
 
@@ -73,10 +73,13 @@ h5{
 .emri{
     text-align: center;
     font-size: 25px;
+    color: #E5E5E5;
 }
 .autori{
     text-align: center;
     font-size: 20px;
+    color: #E5E5E5;
+
 }
 
 .karta:hover{
