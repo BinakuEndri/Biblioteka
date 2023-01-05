@@ -35,3 +35,34 @@ for (i = 0; i < slides.length; i++) {
 }
 slides[slideIndex-1].style.display = "flex";
 }
+
+
+
+let values = document.querySelectorAll(".number");
+let interval = 4000;
+
+values.forEach((values) => {
+let start =0;
+let end = parseInt(values.getAttribute("data-val"));
+let duration = Math.floor( interval / end);
+let counter = setInterval(function(){
+  start +=1;
+  values.textContent = start;
+  if(start == end){
+    clearInterval(counter);
+  }
+}, duration);
+});
+
+
+var books = document.querySelectorAll('.book-box');
+
+[...books].forEach((book)=> {
+book.addEventListener('mouseover',function(){  
+  book.classList.add('isHover');
+ });
+ book.addEventListener('mouseleave',function(){  
+  book.classList.remove('isHover');
+ });
+ 
+})

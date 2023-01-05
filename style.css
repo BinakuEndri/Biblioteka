@@ -81,13 +81,7 @@ h5{
 .card-text{
     color: #E8EDDF!important;
 }
-.btn{
-    color: white!important;
 
-}
-.btn-outline-primary{
-    color: white!important;
-}
 
 .karta-foto{
     position: relative;
@@ -177,4 +171,122 @@ h5{
     justify-content: space-around;
     transition: 0.6s;
 
+}
+.counter-holder{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.counter{
+    max-width: 1120px;
+    max-width: 80vm;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.counter-item{
+    width: 28vmin;
+    height: 28vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 0;
+    position: relative;
+    font-size: 16px;
+    background-color: #14213D;
+    border-bottom: 10px solid #FCA311;
+    border-radius: 20px;
+
+}
+.counter-item .fa-solid, .fa-brands {
+    color: #FCA311 !important;
+    font-size: 3em;
+
+}
+.tekst{
+    color: #E5E5E5;
+    font-size: 22px;
+
+}
+.number{
+    color: #E5E5E5;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.img-fluid{
+    box-shadow: 0 33px 61px -29px rgb( 0 0 0 / 80%);
+    max-height: 350px;
+    width: 100%;
+    object-fit: cover;
+}
+.book-inner-box .icons{
+    position: absolute;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    top: -3%;
+    opacity: 0;
+    transition:  all 0.3s ease-in-out, transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+}
+.book-inner-box .icons .fa-regular{
+    color: #E5E5E5!important;
+    
+}
+.book-inner-box .icons a{
+    
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: #FCA311;
+    
+}
+.book-box.isHover .icons{
+    transform: rotateY(-3%);
+    top: 3%;
+    opacity: 1;
+}
+.book-inner-box .read-btn{
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 100%;
+    opacity: 0;
+    transition:  all 0.3s ease-in-out, transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+
+}
+
+.read-btn .btn-primary {
+    background-color: #FCA311;
+    border: 0;
+}
+
+.book-box.isHover .read-btn{
+    opacity: 1;
+}
+.container{
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    
+}
+.newBooks{
+    font-size: 35px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.book-info{
+    padding-top: 10px;
+}
+.col-lg-3, .col-md-4, .col-mb-3{
+    padding-top: 20px;
 }
