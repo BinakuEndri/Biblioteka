@@ -25,7 +25,7 @@
    
     <title>Document</title>
   </head>
-  <body>
+  <body style="background-color: #14213D;">
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
       <div class="container-fluid" style="max-width: 1120px">
         <a class="navbar-brand" href="ballina.html"
@@ -65,32 +65,51 @@
       </div>
     </nav>
    
-   <div class="main-div" style="background-image: url('Foto/bibloteka3.jpg');">
+    <div class="main-div" style=" margin-top: 116px;">
 
 
-
-
-
-
-
-
-    <div class="box1">
-        <div id="layout1"></div>
     
-      </div>
-    
-    <div id="legend1">
-      <div class="seat"></div> <div class="txt" style="color: white;"><b>Available</b></div>
-      <div class="seat taken"></div> <div class="txt" style="color: red;"><b>Taken</b></div>
-      <div class="seat selected"></div> <div class="txt" style="color: #87ff96;"><b>Your Chosen Seats</b></div>
-    </div>
+      <div class="box1">
+         <div id="layout1"></div>
+     </div>
+ 
+     <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+       
+ 
+       <table class="table text-center text-white">
+         <tbody class="font-weight-bold">
+           <tr>
+             <td>E hënë - E premte:</td>
+             <td><i>8am - 10pm</i></td>
+           </tr>
+           <tr>
+             <td>E shtunë - E diel:</td>
+             <td><i>10am - 4pm</i></td>
+           </tr>
+           
+         </tbody>
+       </table>
+       <div id="legend1" style="padding-top: 50px;">
+         <div class="seat"></div> <div class="txt" style="color: white;"><b>Të lira</b></div>
+         <div class="seat taken"></div> <div class="txt" style="color: red;"><b>Të zëna</b></div>
+         <div class="seat selected"></div> <div class="txt" style="color: #87ff96;"><b>Karriget e zgjedhura</b></div>
+       </div>
+       <div style="padding-top: 50px;">
+       <button class="col-md-6" id="save" onclick="animateButton(); reserve.save();"><b>Rezervo</b></button></div>
+     </div>
      
-    <button id="save"  onclick="reserve.save()">Reserve Seats</button>
-
-  
-
-</div>
-
+ </div>
+ 
+ 
+     
+    
+      
+    
+ 
+     
+   </div>
+ 
+ 
 
 
     <footer style="padding: 0;">

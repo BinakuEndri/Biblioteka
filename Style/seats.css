@@ -1,84 +1,87 @@
 .seat {
-    text-align: center;
-    padding: 20px 10px;
-    border-radius: 50px;
-    background: #f1f1f1;
-  }
-  .taken { background: #df0000; color: #fff; }
-  .selected { background: #87ff96; }
-   
+  text-align: center;
+  padding: 13px 10px;
+  border-radius: 50px;
+  background: #f1f1f1;
+  cursor: pointer;
+}
+.taken { background: #df0000; color: #fff; }
+.selected { background: #87ff96; }
  
-  #layout1 {
-    max-width: 400px;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    margin-bottom: 20px;
-  }
-   
+
+#layout1 {
+  max-width: 400px;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+  margin-bottom: 20px;
+}
  
-  #legend1 {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 50px auto ;
-  }
-  #legend1 .txt {
-    display: flex;
-    align-items: center;
 
-  }
-
-  .txt{
-    font-family: "Product Sans",Arial,Helvetica,sans-serif;
-    color: white;
-    /* background: ghostwhite; 
-            font-size: 12px; 
-            padding: 3px; 
-            border: 1px solid lightgray; 
-            margin: 5px;
-            border-radius: 50px ;
-            display: flex;
-            justify-content: center; */
- 
-  }
-   
- 
-  #save {
-    font-size: 20px;
-    margin-left: 30px;
-    padding: 10px 20px;
-    border: 0;
-    color: #fff;
-    background: #00479f;
-    border-radius: 50px ;
-
-   
-
-  }
-
+#legend1 {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 50px auto ;
   
   
+}
+#legend1 .txt {
+  display: flex;
+  align-items: left;
+
+}
+
+.txt{
+  font-family: "Product Sans",Arial,Helvetica,sans-serif;
+  color: white;
   
 
+}
+ 
+
+#save {
+  font-size: 20px;
+  margin-left: 30px;
+  padding: 10px 20px;
+  border: 0;
+  color: #fff;
+  background: #00479f;
+  border-radius: 50px ;
+
+ 
+
+}
+
+#save {
+  transition: all 0.1s ease-in-out;
+}
+
+#save.animate {
+  transform: scale(1.1);
+}
 
 
 
 
-  .box1{
-    background-color: #FCA311;
-    width: 500px;
-    border: 15px solid #14213D;
-    padding: 50px;
-    margin: 20px;
-    
-   
-    
-    
-  }
 
- .main-div{
-    height: 100%;
-    display: flex;
-    justify-content: center;
+
+
+
+.box1{
+  background-color: #14213D;
+  width: 500px;
+ 
+  padding: 50px;
+  margin: 20px;
+  
+ 
+  
+  
+}
+
+.main-div{
+  height: 100%;
+  display: flex;
+  justify-content: center;
 align-items: center;
- }
+}
