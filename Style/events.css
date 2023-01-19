@@ -256,6 +256,9 @@
       width: 30px;
    }
  }
- .footer-align {
-    display: inline-block;
- }
+ footer {
+  position: absolute;
+  bottom: 0;
+  height: 0px;
+  width: 100%; /* to take full width of the parent container */
+}
