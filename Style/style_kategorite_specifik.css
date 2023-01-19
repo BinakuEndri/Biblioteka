@@ -1,0 +1,86 @@
+.kategori-div {
+    background-color: rgb(244, 236, 227);
+    margin-left: 10px;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.card {
+    max-width: 250px;
+    transition: 0.6s !important;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+h5 {
+    font-family: 'Montserrat-Bold' !important;
+    color: #E5E5E5 !important;
+}
+
+.card-title {
+    font-family: 'Montserrat-Bold' !important;
+    color: #cd8d0f !important;
+}
+
+.card-text {
+    color: #545454 !important;
+}
+
+.col-lg-3,
+.col-md-4,
+.col-mb-3 {
+    padding-top: 20px;
+}
+
+.container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.banner-image {
+    position: relative;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    padding: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bgdrama {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Foto/dramabg.jpg);
+}
+
+.bgmister {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Foto/misterbg.jpg);
+}
+
+.bgromance {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Foto/romancebg.jpg);
+}
+
+.bgsc {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Foto/scbg.jpg);
+}
+
+.bgpoezi {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Foto/poezibg.jpg);
+}
+
+.bgnovel {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../Foto/novelbg.jpg);
+}
+
+
+.responsive {
+    width: 100%;
+    height: 100%;
+}
+
+.card-img-top {
+    max-height: 350px;
+}
