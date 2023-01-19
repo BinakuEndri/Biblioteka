@@ -110,3 +110,17 @@ let num = 164.123234213;
 
 
 
+ function Person(name,hairColor,age) {
+    this.name = name;
+    this.hairColor = hairColor;                 // Object Constructors
+    this.age = age;
+    this.updateAge = function() {    
+        return ++this.age;
+    };
+
+ }
+
+ let person01 = new Person("Daniel","Brown",27);
+ console.log(person01.name); 
+
+
