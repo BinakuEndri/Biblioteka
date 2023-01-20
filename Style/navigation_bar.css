@@ -57,7 +57,7 @@
 }
 footer{
     background-color: #14213D;
-    color: #FCA311;
+    color: white;
     text-align: center;
 }
  .button {
@@ -72,3 +72,18 @@ footer{
  .icon-white{
     color: white;
  }
+
+ 
+.footer-col h5:hover{
+  color: #ffffff;
+  padding-left: 8px;
+} 
+
+.move-button:hover{
+    color: #ffffff;
+    padding-left: 8px;
+  } 
+
+  .icon3 {
+    font-size: 150px;
+  }

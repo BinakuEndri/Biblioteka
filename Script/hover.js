@@ -19,10 +19,10 @@ window.addEventListener("scroll", function () {
 var reserve = {
   
   init : () => {
-    // (A1) GET LAYOUT WRAPPER
+    
     let layout = document.getElementById("layout1");
  
-    // (A2) GENERATE SEATS
+   
     for (let i=65; i<=72; i++) { for (let j=1; j<=8; j++) {
       let seat = document.createElement("div");
       seat.innerHTML = String.fromCharCode(i) + j;
@@ -31,7 +31,7 @@ var reserve = {
       layout.appendChild(seat);
     }}
  
-    // (A3) FOR DEMO ONLY - RANDOM TAKEN SEATS
+    
     let all = document.querySelectorAll("#layout1 .seat"),
         len = all.length - 1, rnd = [];
     while (rnd.length != 8) {
@@ -44,22 +44,22 @@ var reserve = {
     }
   },
  
-  // (B) CHOOSE THIS SEAT
+ 
   toggle : (seat) => {
     seat.classList.toggle("selected");
   },
  
-  // (C) SAVE RESERVATION
+ 
   save : () => {
-    // (C1) GET SELECTED SEATS
+   
     let selected = document.querySelectorAll("#layout1 .selected");
  
-    // (C2) ERROR!
+    
     if (selected.length == 0) { alert("Duhet të zgjedhni karrige!"); }
  
-    // (C3) SELECTED SEATS
+    
     else {
-      // (C3-1) GET SELECTED SEAT NUMBERS
+      
       let seats = [];
       for (let s of selected) { seats.push(s.innerHTML); }
     }
