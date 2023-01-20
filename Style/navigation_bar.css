@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'Montserrat-Reg';
     src: url(../Fonts/Montserrat-Regular.ttf);
@@ -87,3 +86,9 @@ footer{
   .icon3 {
     font-size: 150px;
   }
+
+
+  .butoni button  {
+    background-color: #FCA311!important;
+    width: 12em!important ;
+}
