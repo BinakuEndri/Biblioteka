@@ -82,8 +82,3 @@
     width: 100%;
     padding-bottom: 60px;
 }
-
-.img-fluid {
-    max-height: 375px;
-    min-height: 375px;
-}
