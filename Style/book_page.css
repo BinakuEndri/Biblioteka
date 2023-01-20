@@ -1,9 +1,9 @@
-.butoni button  {
-    background-color: #FCA311!important;
-    width: 12em!important ;
+.butoni button {
+    background-color: #FCA311 !important;
+    width: 12em !important;
 }
 
-.book-inner-box .icons{
+.book-inner-box .icons {
     position: absolute;
     right: 15px;
     display: flex;
@@ -11,15 +11,17 @@
     gap: 4px;
     top: -3%;
     opacity: 0;
-    transition:  all 0.3s ease-in-out, transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out, transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
 }
-.book-inner-box .icons .fa-regular{
-    color: #E5E5E5!important;
-    
+
+.book-inner-box .icons .fa-regular {
+    color: #E5E5E5 !important;
+
 }
-.book-inner-box .icons a{
-    
+
+.book-inner-box .icons a {
+
     width: 40px;
     height: 40px;
     display: flex;
@@ -27,20 +29,22 @@
     align-items: center;
     border-radius: 50%;
     background: #FCA311;
-    
+
 }
-.book-box.isHover .icons{
+
+.book-box.isHover .icons {
     transform: rotateY(-3%);
     top: 3%;
     opacity: 1;
 }
-.book-inner-box .read-btn{
+
+.book-inner-box .read-btn {
     position: absolute;
     bottom: 20px;
     text-align: center;
     width: 100%;
     opacity: 0;
-    transition:  all 0.3s ease-in-out, transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out, transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 .read-btn .btn-primary {
@@ -48,26 +52,38 @@
     border: 0;
 }
 
-.book-box.isHover .read-btn{
+.book-box.isHover .read-btn {
     opacity: 1;
 }
-.container{
+
+.container {
     padding-top: 60px;
-    
+
 }
-.newBooks{
+
+.newBooks {
     font-size: 35px;
     text-align: center;
     padding-bottom: 30px;
 }
-.book-info{
+
+.book-info {
     padding-top: 10px;
 }
-.col-lg-3, .col-md-4, .col-mb-3{
+
+.col-lg-3,
+.col-md-4,
+.col-mb-3 {
     padding-top: 20px;
 }
-.c2{
+
+.c2 {
     background-color: #E5E5E5;
     width: 100%;
     padding-bottom: 60px;
+}
+
+.img-fluid {
+    max-height: 375px;
+    min-height: 375px;
 }
