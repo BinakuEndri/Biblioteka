@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Style/book_page.css" />
     <link rel="stylesheet" href="../Style/navigation_bar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
 
     <link
       rel="stylesheet"
@@ -88,10 +90,16 @@
             >
           </div>
         </div>
+
+        <div class="row">
+          <div class="butoni">
+              <button id="hideButton" class="btn shadow-sm rounded-pill mt-2">Shfaq/Fsheh Librat</button>
+        </div>
+        </div>
        
       </section>
     </div>
-    <div class="c2">
+    <div class="c2" style="display: none;">
     <div class="container" style="max-width: 1120px">
       <div class="row">
         <h2 class="newBooks">Libra te ngjajshem</h2>
@@ -128,7 +136,7 @@
           </div>
         </div>
         <div class="col-lg-3 col-md-4 col-mb-6">
-          <div class="book-box">
+          <div class="book-box ">
             <div class="book-inner-box position-relative">
               <div class="icons">
                 <a href="" class="text-decoration-none"
@@ -218,6 +226,9 @@
           </div>
         </div>
       </div>
+      <div class="butoni">
+        <button id="animateButton" class="btn shadow-sm rounded-pill mt-2">Animacion</button>
+  </div>
     </div>
   </div>
     <footer >
@@ -287,6 +298,26 @@
        </div>
     
   </footer>
+
+  <script>
+    $(document).ready(function(){
+      $("#hideButton").click(function(){
+        $(".c2").slideToggle("slow");
+      });
+    });
+
+    $(document).ready(function(){
+      $("#animateButton").click(function(){
+        var book = $(".book-box");
+        book.animate({height: 'auto', opacity: '0.4'}, "slow");
+        book.animate({width: '150px', opacity: '0.8'}, "slow");
+        book.animate({height: 'auto', opacity: '0.4'}, "slow");
+        book.animate({width: '100%', opacity: '1'}, "slow");
+      });
+    });
+  
+  
+  </script>
 
     <script type="text/javascript" src="../Script/hover.js"></script>
   </body>

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Style/book_page.css" />
     <link rel="stylesheet" href="../Style/navigation_bar.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <link
       rel="stylesheet"
@@ -87,8 +88,14 @@
               expedita repudiandae facere, aut velit repellat?</span
             >
           </div>
+
         </div>
-       
+        <div class="row">
+        <div class="butoni">
+            <button id="hideButton" class="btn shadow-sm rounded-pill mt-2">Fsheh librat</button>
+          <button id="showButton" class="btn shadow-sm rounded-pill mt-2">Shfaq librat</button>
+      </div>
+      </div>
       </section>
     </div>
     <div class="c2">
@@ -287,6 +294,14 @@
        </div>
     
   </footer>
+  <script>
+    $("#hideButton").click(function(){
+      $(".c2").toggle();
+    });
+    $("#showButton").click(function(){
+      $(".c2").toggle();
+    });
+  </script>
 
     <script type="text/javascript" src="../Script/hover.js"></script>
   </body>

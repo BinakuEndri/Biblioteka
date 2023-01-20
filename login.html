@@ -20,52 +20,13 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Document</title>
-    <title>Document</title>
   </head>
   <body>
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark">
-      <div class="container-fluid" style="max-width: 1220px">
-        <a class="navbar-brand" href="ballina.html"
-          ><i class="fa-solid fa-book-open-reader"></i>
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#mynavbar"
-        >
-          <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <div class="collapse navbar-collapse" id="mynavbar">
-          <div class="mx-auto"></div>
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="ballina.html">Ballina</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Kategorite</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="sallat_e_leximit.html"
-                >Sallat e Leximit</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="events.html">Events</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="kontakti.html">Kontakti</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
     <div class="main">
       <div class="box">
         <div class="inner-box">
           <div class="forms-wrap">
-            <form action="index.html" autocomplete="off" class="sign-in-form">
+            <form id="form" action="ballina.html" class="sign-in-form">
               <div class="logo">
                 <a href="ballina.html"
                   ><i class="fa-solid fa-book-open-reader"></i>
@@ -81,25 +42,26 @@
                 <div class="input-wrap">
                   <input
                     type="text"
+                    id="name"
                     class="input-field"
                     autocomplete="off"
-                    minlength="4"
-                    required
                   />
                   <label>Emri</label>
+                  <div class="error"></div>
                 </div>
                 <div class="input-wrap">
                   <input
                     type="password"
+                    id="password"
                     class="input-field"
                     autocomplete="off"
-                    minlength="4"
-                    required
                   />
                   <label>Fjalekalimi</label>
+                  <div class="error"></div>
                 </div>
 
-                <input type="submit" value="Sign In" class="sign-btn" />
+                <button type="submit" class="sign-btn">Kyquni</button>
+                <!-- <input type="submit" value="Sign In" class="sign-btn" /> -->
 
                 <p class="text">
                   Keni harruar fjalekalimin apo detajet e hyrjes
@@ -107,7 +69,12 @@
                 </p>
               </div>
             </form>
-            <form action="index.html" autocomplete="off" class="sign-up-form">
+            <form
+              id="form"
+              action="ballina.html"
+              autocomplete="off"
+              class="sign-up-form"
+            >
               <div class="logo">
                 <a href="ballina.html"
                   ><i class="fa-solid fa-book-open-reader"></i>
@@ -117,7 +84,7 @@
               <div class="heading">
                 <h2>Regjistrohini</h2>
                 <h6>Veqse jeni i regjistruar?</h6>
-                <a href="#" class="signup">Kyquni</a>
+                <mark> <a href="#" class="signup">Kyquni</a></mark>
               </div>
               <div class="actual-form">
                 <div class="input-wrap">
@@ -125,42 +92,44 @@
                     type="text"
                     class="input-field"
                     autocomplete="off"
-                    minlength="4"
-                    required
+                    id="name"
                   />
                   <label>Emri</label>
+                  <div class="error"></div>
                 </div>
                 <div class="input-wrap">
                   <input
                     type="email"
                     class="input-field"
                     autocomplete="off"
-                    required
+                    id="email"
                   />
                   <label>Email</label>
+                  <div class="error"></div>
                 </div>
                 <div class="input-wrap">
                   <input
                     type="password"
+                    id="password"
                     class="input-field"
                     autocomplete="off"
                     minlength="4"
-                    required
                   />
                   <label>Fjalekalimi</label>
+                  <div class="error"></div>
                 </div>
                 <div class="input-wrap">
                   <input
                     type="password"
+                    id="password1"
                     class="input-field"
                     autocomplete="off"
-                    minlength="4"
-                    required
                   />
                   <label>Konfirmo Fjalekalimin</label>
+                  <div class="error"></div>
                 </div>
-
-                <input type="submit" value="Sign Up" class="sign-btn" />
+                <button type="submit" class="sign-btn">Sign Up</button>
+                <!-- <input type="submit" value="Sign Up" class="sign-btn" /> -->
 
                 <p class="text">
                   Duke u regjistruar une pajtohem me
@@ -194,7 +163,85 @@
           main.classList.toggle("sign-up-mode");
         });
       });
+
+      const name = document.getElementById("name");
+      const password = document.getElementById("password");
+      const email = document.getElementById("email");
+      const password1 = document.getElementById("password1");
+      const form = document.getElementById("form");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        validateInputs();
+      });
+
+      const isValidEmail = (email) => {
+        const re =
+          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return re.test(String(email).toLowerCase());
+      };
+
+      const setError = (element, message) => {
+        const inputControl = element.parentElement;
+        const errorDisplay = inputControl.querySelector(".error");
+
+        errorDisplay.innerText = message;
+        inputControl.classList.add("error");
+        inputControl.classList.remove("success");
+
+        //alert(message);
+      };
+
+      const setSuccess = (element) => {
+        const inputControl = element.parentElement;
+        const errorDisplay = inputControl.querySelector(".error");
+
+        errorDisplay.innerText = "";
+        inputControl.classList.add("success");
+        inputControl.classList.remove("error");
+        //alert(message);
+      };
+
+      const validateInputs = () => {
+        const nameValue = name.value.trim();
+        const passwordValue = password.value.trim();
+        const emailValue = email.value.trim();
+        const password1Value = password1.value.trim();
+
+        if (nameValue === "") {
+          setError(name, "Username is required");
+          //setError("Username is required");
+        } else {
+          setSuccess(name);
+        }
+
+        if (emailValue === "") {
+          setError(email, "Email is required");
+        } else if (!isValidEmail(emailValue)) {
+          setError(email, "Provide a valid email address");
+        } else {
+          setSuccess(email);
+        }
+
+        if (passwordValue === "") {
+          setError(password, "Passsword is required");
+          //setError("Passsword is required");
+        } else if (passwordValue.length < 8) {
+          setError(password, "Password must be at least 8 character");
+          //setError("Password must be at least 8 character");
+        } else {
+          setSuccess(password);
+        }
+
+        if (password1Value === "") {
+          setError(password1, "Please confirm your password");
+        } else if (password1Value !== passwordValue) {
+          setError(password1, "Passwords doesn't match");
+        } else {
+          setSuccess(password1);
+        }
+      };
     </script>
-    <script type="text/javascript" src="Script/hover.js"></script>
   </body>
 </html>

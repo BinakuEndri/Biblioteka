@@ -154,6 +154,20 @@ label{
     top: -2%;
 }
 
+.input-wrap.success{
+    border-bottom: solid 0.5px;
+    border-color:green ;
+}
+.input-wrap.error{
+    border-bottom: solid 0.5px;
+    border-color:red;
+}
+.input-wrap .error{
+    position: absolute;
+    bottom: -10px;
+    color: red;
+    font-size: 8px;
+}
 .sign-btn{
     display: inline-block;
     width: 100%;
