@@ -83,6 +83,7 @@ h5 {
 
 .card-img-top {
     max-height: 350px;
+    min-height: 350px;
 }
 
 h1 {
