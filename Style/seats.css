@@ -3,7 +3,6 @@
   padding: 13px 10px;
   border-radius: 50px;
   background: #f1f1f1;
-  cursor: pointer;
 }
 .taken { background: #df0000; color: #fff; }
 .selected { background: #87ff96; }
@@ -31,13 +30,6 @@
 
 }
 
-.txt{
-  font-family: "Product Sans",Arial,Helvetica,sans-serif;
-  color: white;
-  
-
-}
- 
 
 #save {
   font-size: 20px;
@@ -47,25 +39,7 @@
   color: #fff;
   background: #00479f;
   border-radius: 50px ;
-
- 
-
 }
-
-#save {
-  transition: all 0.1s ease-in-out;
-}
-
-#save.animate {
-  transform: scale(1.1);
-}
-
-
-
-
-
-
-
 
 .box1{
   background-color: #14213D;
@@ -73,9 +47,7 @@
  
   padding: 50px;
   margin: 20px;
-  
- 
-  
+
   
 }
 
