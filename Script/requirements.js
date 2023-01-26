@@ -47,22 +47,22 @@ const emrat = libra.map(libra => {
 });
 
 
-const libriautor = libra.map(libra =>{
-    return [libra.emriLibrit, libra.autori]; 
+const libriautor = libra.map(libra => {
+    return [libra.emriLibrit, libra.autori];
 });
 
 const meIVjeter = libra.filter(libra => {
-    return libra.viti >=1950;
+    return libra.viti >= 1950;
 });
 
 const meIVjeterEmri = libra.filter(libra => {
-    return libra.viti >=1950;
-}).map(libra =>{
+    return libra.viti >= 1950;
+}).map(libra => {
     return libra.emriLibrit;
 });
 
 
-const totali = libra.reduce((total,libra) => {
+const totali = libra.reduce((total, libra) => {
 
     return total + libra.viti;
 
@@ -84,7 +84,7 @@ console.log(str.match(/how/));    // match();
 
 
 console.log(str);
-console.log(str.replace("Hi","Hello"));   // replace();
+console.log(str.replace("Hi", "Hello"));   // replace();
 
 
 let currentDate = new Date();
@@ -99,28 +99,29 @@ console.log(isNaN('Hello'));              // return true
 
 
 let num = 164.123234213;
- let n = num.toExponential(3);          // toExponential
+let n = num.toExponential(20);          // toExponential
+
+console.log(n);
+
+number = new Number(19);
+console.log(number);
+console.log(number.toString());       // toString()
+console.log(number.toString(2));       // toString() kthen ne binar
 
 
 
- number = new Number(19);
- console.log(number);
- console.log(number.toString());       // toString()
- console.log(number.toString(2));       // toString() kthen ne binar
-
-
-
- function Person(name,hairColor,age) {
+function Person(name, hairColor, age) {
     this.name = name;
     this.hairColor = hairColor;                 // Object Constructors
     this.age = age;
-    this.updateAge = function() {    
+    this.updateAge = function () {
         return ++this.age;
     };
 
- }
+}
 
- let person01 = new Person("Daniel","Brown",27);
- console.log(person01.name); 
+let person01 = new Person("Daniel", "Brown", 27);
+console.log(person01.name);
+console.log(person01.updateAge());
 
 
